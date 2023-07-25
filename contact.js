@@ -31,7 +31,7 @@ function mail(){
       text: formData.get('text'),
     };
 
-    fetch('http://localhost:3000/send-email', {
+    fetch('http://localhost:3000', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
