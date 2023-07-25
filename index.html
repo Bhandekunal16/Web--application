@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>component loading</title>
+  </head>
+  <body>
+    <header id="header"></header>
+    <div id="primary"></div>
+
+    <div id="footer"></div>
+
+
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    <script src="home.js"></script>
+    <script src="about.js"></script>
+    <script src="service.js"></script>
+    <script src="contact.js"></script>
+    <script>
+      const app = () => {
+        return `
+        <div>
+  <h1>Welcome to My Website</h1>
+  <p>This is the content of the website.</p>
+</div>`;
+      };
+
+      const appContent = document.getElementById("primary");
+      appContent.innerHTML = app();
+
+      const header = document.getElementById("header");
+      header.innerHTML = content();
+
+      const footer = document.getElementById("footer");
+      footer.innerHTML = footerContent();
+
+    </script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .navbar {
+        background-color: #333;
+        overflow: hidden;
+      }
+
+      .navbar a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      #primary {
+        text-align: center;
+        height: 80vh;
+      }
+
+      .footerContent {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .contact-form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 10%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+
+    .contact-form button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    </style>
+  </body>
+</html>
